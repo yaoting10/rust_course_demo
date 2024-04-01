@@ -1,4 +1,3 @@
-use std::process::Output;
 
 fn largest<T: PartialOrd+Clone>(list :&[T]) -> T {
     let mut largest = list[0].clone();
