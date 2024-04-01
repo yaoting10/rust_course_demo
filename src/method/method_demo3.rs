@@ -11,7 +11,7 @@ impl Message {
     fn call(&self){
         // let b = eq(self, *Message::Write(String::from("ok")));
         // println!(" id:{:?}", b)
-        // TODO 这里定义方法体
+        //  这里定义方法体
     }
 }
 
