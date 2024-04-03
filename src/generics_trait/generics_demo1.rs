@@ -18,8 +18,14 @@ fn largest_1<T:PartialOrd + Clone> (list: &[T]) -> T{
     largest
 }
 
-fn largest_2<T: PartialOrd>(list: &[T])->&T{
-    let 
+fn largest_2<T: PartialOrd>(list: &[T])-> &T{
+    let mut largest = &list[0];
+    for item in list.iter() {
+        if item >largest {
+            largest = item
+        }
+    }
+    largest
 }
 #[test]
 fn test_largest() {
@@ -34,6 +40,13 @@ fn test_largest() {
 
 #[test]
 fn test_largest_1(){
+    let number_list = vec![34, 50, 25, 100, 85];
+    let result = largest_1(&number_list);
+    println!("{:?}", &result);
+}
+
+#[test]
+fn test_largest_2(){
     let number_list = vec![34, 50, 25, 100, 85];
     let result = largest_1(&number_list);
     println!("{:?}", &result);
